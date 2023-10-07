@@ -1,4 +1,7 @@
 package ru.netology.Todos;
+
+import java.text.Format;
+
 public class Epic extends Task {
     protected String[] subtasks;
 
@@ -9,5 +12,15 @@ public class Epic extends Task {
 
     public String[] getSubtasks() {
         return subtasks;
+    }
+
+    @Override
+    public boolean matches(String query) {
+        for (String subtask : subtasks) {
+            if (subtask.contains(query)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

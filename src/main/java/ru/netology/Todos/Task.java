@@ -1,4 +1,5 @@
 package ru.netology.Todos;
+
 import java.util.Objects;
 
 public class Task {
@@ -26,5 +27,9 @@ public class Task {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    public boolean matches(String query) {
+        return false;
     }
 }
